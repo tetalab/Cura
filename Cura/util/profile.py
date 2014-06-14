@@ -166,7 +166,7 @@ class setting(object):
 #Define a fake _() function to fake the gettext tools in to generating strings for the profile settings.
 def _(n):
 	return n
-
+setting('stretchDistance', 0, int, 'advanced', ('Quality')).setLabel(("Stretch Distance in micron's"), _("Stretch Distance in micron's"))
 setting('layer_height',              0.1, float, 'basic',    _('Quality')).setRange(0.0001).setLabel(_("Layer height (mm)"), _("Layer height in millimeters.\nThis is the most important setting to determine the quality of your print. Normal quality prints are 0.1mm, high quality is 0.06mm. You can go up to 0.25mm with an Ultimaker for very fast prints at low quality."))
 setting('wall_thickness',            0.8, float, 'basic',    _('Quality')).setRange(0.0).setLabel(_("Shell thickness (mm)"), _("Thickness of the outside shell in the horizontal direction.\nThis is used in combination with the nozzle size to define the number\nof perimeter lines and the thickness of those perimeter lines."))
 setting('retraction_enable',        True, bool,  'basic',    _('Quality')).setLabel(_("Enable retraction"), _("Retract the filament when the nozzle is moving over a none-printed area. Details about the retraction can be configured in the advanced tab."))
